@@ -15,7 +15,7 @@
 
     <title>Maestria UNIR - Enrique Corona</title>
 
-    <link rel="icon" href="favicon.PNG">
+    <link rel="icon" href="assets/favicon.PNG">
 </head>
 <body>
 
