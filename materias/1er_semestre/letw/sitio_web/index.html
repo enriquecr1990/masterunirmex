@@ -1,0 +1,96 @@
+<!-- etiqueta DOCTYPE html para especificar al navegador que se trata de un documento html5 -->
+<!DOCTYPE html>
+<!-- etiqueta html del documento completo -->
+<html lang="es">
+<!-- etiqueta head del documento, por lo regutar esta información no se cuentra visible para el usuario, puede contener
+el titulo de la pagina web, las cabeceras meta, la descripcion del sitio, el autor, las hojas de estilo -->
+<head>
+
+    <!-- ETIQUETAS META codificacion del documento html usando el UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- etiqueta meta para especificar lo de un sitio web responsivo
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+
+    <!-- etiquetas metas, que nos ayudan para el posicionamiento en los buscadores (google, altavista, yahoo,...)
+     se puede poner el nombre del autor de la pagina, la descripcion del sitio y las palabras clave para que
+     salga nuestro sitio con dichas keywords-->
+    <meta name="author" content="Enrique Corona Ricaño">
+    <meta name="description"
+          content="Repositorio para las materias de la Maestría en Dirección e Ingenieria de Sitios Web de UNIR México por el alumno Enrique Corona Ricaño">
+    <meta name="keywords"
+          content="Enrique Corona Ricaño, Estudiante de Maestria en UNIR México, Maestría en Dirección e Ingenieria de Sitios Web ">
+
+    <!-- titulo de la pagina web, tambien no sirve para que salga en los buscadores y es el titulo de la pagina  -->
+    <title>Sitio Web HTML5</title>
+
+    <!-- icono del sistema que se a lado del titulo, se muestra por lo regular a lado iquierzo de la pestaña -->
+    <link rel="icon" href="imagenes/logo_html5.png">
+
+</head>
+<!-- etiqueta body, es la estructura del documento y aqui es donde va estar la informacion que el usuario va ver en la página web
+puede contener tablas, formulario, parrafos, los javascript que se acostumbra por estandar colocarlos al final antes de cerrar la etiqueta body
+ -->
+<body>
+
+<!-- la etiqueta header es la que se encuentra al principio de la pagina -->
+<header>
+    <img src="imagenes/logo/logo_ecr_3d.PNG" width="70px">
+</header>
+
+<!-- etiqueta de navegación por lo regular aqui puede ir el menuo del sitio, el logotipo y hasta el link/boton/formulario de inicio de sesion  -->
+<nav>
+    <!-- etiqueta de urderder list -->
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="educacion.html">Educación</a> </li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<img src="imagenes/personal/perfil.jpg" width="15%" alt="Foto perfil">
+
+<!-- etiqueta de un parrafo de texto -->
+<p>
+    Soy Enrique Corona, tengo 30 años, naci en el estado Tlaxcala, egresado del Instituto Tecnológico de Apizaco; actualmente trabajo
+    como desarrollador fullstack en la empresa <a href="http://softura.com.mx" target="_blank">Softura Solutions</a> en la modalidad de
+    OutSourcing en su mayoria; por requerimientos de los usuarios trabajamos con las tecnologias de PHP, HTML5, CSS3,
+    JavaScript, y MySQL.
+
+    <br><br>Me gusta ser autodidacta y muchas veces no descanso hasta lograr lo que deseo; me gustan los videojuegos pero soy
+    mas de lo que llaman la "vieja escuela", entre los juegos clasicos como:
+    <ul>
+        <li>Super Mario Bros</li>
+        <li>Super Mario 64</li>
+        <li>Mario Kart 64</li>
+        <li>Saga de Crash Bandicoot 1, 2, 3 warped</li>
+        <li>Need for Speed Most Wanted 2005</li>
+    </ul>
+</p>
+
+<!--autload para que cargue el audio al cargar la pagina automaticamente
+controls para que se vean los controles del reproductor
+loop para que el sonido se repoduzca indefinidamente
+preload nos sirve para indicar al navegador se carga outomaticamente al momento de cargar la pagina
+los formatos mas comunes y que puede reproducir el navegador son mp3, ogg, m4a -->
+<audio controls loop preload="auto">
+    <source src="audio/tema_super_mario_bros.mp3" type="audio/mp3">
+</audio>
+
+<!-- etiqueta para que se carge un video dentro de la estructura de archivos del sitio web
+los formatos mas comunes para la reproduccion de video es mp4, ogg, webm
+ -->
+<br>
+<video controls>
+    <source src="video/desarrollo_sistemas.mp4">
+</video>
+
+<!-- etiqueta del pie de pagina que se deberia encontrar al final del documento  -->
+<footer>
+    Diseñado por Enrique Corona 2020 - México &copy;<br>
+    Entregable para la Maestria UNIR
+</footer>
+</body>
+
+</html>
