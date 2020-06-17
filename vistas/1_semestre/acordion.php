@@ -11,7 +11,7 @@
          data-parent="#acordion_semestres">
         <div class="card-body">
             <div class="row">
-                <div class="form-group col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/servidores_web.jpg" class="card-img-top img_card"
                              alt="Administración de Servidores Web">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/computacion_cliente_servidor.png" class="card-img-top img_card"
                              alt="Administración de Servidores Web">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/direccion_planificacion_proyectos.jpg"
                              class="card-img-top img_card"
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/lenguajes_estandares_programacion.jpg"
                              class="card-img-top img_card"

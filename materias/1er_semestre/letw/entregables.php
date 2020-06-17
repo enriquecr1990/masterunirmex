@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="form-group col-lg-4 col-md-6 col-sm-12">
+    <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Sitio Web HTML5</h5>

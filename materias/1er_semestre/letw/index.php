@@ -24,7 +24,7 @@
 </head>
 <body>
 
-<div class="container mt-3">
+<div class="container-fluid mt-3">
     <div class="row">
         <div class="form-group col-lg-12 col-md-12 text-center font-weight-bold ">
             <div class="alert alert-primary">Lenguajes, estándares y Tecnologías Web</div>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="row">
-        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+        <div class="form-group col-xl-12">
             <div class="accordion" id="entregables_taras">
                 <div class="card">
                     <div class="card-header">
