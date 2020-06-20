@@ -57,3 +57,17 @@ todo el contenido html de página se agregan con los include de php (sistema dum
 
 <!-- pie de la página del html del sitio -->
 <?php include_once('paginas/footer.php') ?>
+
+<!--
+Mini sistema de contactos que tiene funcionalidad de un CRUD (Consultar, Registrar, Actualizar y Eliminar) registros;
+este sistema al ser en código duro sin uso de una Base de Datos se le conoce como Sistema Dummy.
+1.	En la pantalla principal se muestra un tablero de 3 registros de contactos hardcodeados (funcionalidad de consultar).
+2.	En el index del sitio se aprecia el botón “Nuevo Contacto” que al dar clic se mostrará un formulario de contacto
+    (se usa para nuevo y modificar) y en los registros el botón de modificar y eliminar.
+3.	Para el nuevo/modificar contacto, se hacen uso de las validaciones de lado del cliente HTML5 y del lado del servidor
+    por medio de un helper de php creado y se valida campo por campo; para el nombre, apellidos, teléfono, correo, y
+    link de Facebook se hace uso de expresiones regulares para aceptar cierto tipo de formatos en los campos.
+4.	La información de modificar/eliminar/datos de contacto, viajan por GET, en formulario de contacto viajan por POST
+5.	Se integra la opción de ver el sistema con hoja de estilos muy básica o sin ella (botón con dato css por GET en
+    la pantalla principal).
+ -->
