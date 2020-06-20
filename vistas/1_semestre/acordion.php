@@ -28,14 +28,14 @@
                 <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/computacion_cliente_servidor.png" class="card-img-top img_card"
-                             alt="Administración de Servidores Web">
+                             alt="Computación, Cliente y Servidor">
                         <div class="card-body">
                             <h5 class="card-title">Computación, Cliente y Servidor</h5>
                             <p class="card-text text-justify">En este tema estudiarás la diferencia
                                 entre lo que denominamos «página web» y lo que denominamos «aplicación
                                 web». También se introducirán las diferentes arquitecturas que permiten
                                 la creación de aplicaciones web (cliente y servidor).</p>
-                            <a href="#" class="btn btn-outline-primary">Ir a Materia</a>
+                            <a href="materias/1er_semestre/ccs" class="btn btn-outline-primary">Ir a Materia</a>
                         </div>
                     </div>
                 </div>
