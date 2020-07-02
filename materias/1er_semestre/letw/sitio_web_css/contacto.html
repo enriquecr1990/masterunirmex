@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Enrique Corona Ricaño">
+    <meta name="description"
+          content="Repositorio para las materias de la Maestría en Dirección e Ingenieria de Sitios Web de UNIR México por el alumno Enrique Corona Ricaño">
+    <meta name="keywords"
+          content="Enrique Corona Ricaño, Estudiante de Maestria en UNIR México, Maestría en Dirección e Ingenieria de Sitios Web ">
+
+    <title>Sitio Web HTML5 - Contacto</title>
+
+    <link rel="icon" href="imagenes/logo_html5.png">
+
+    <link rel="stylesheet" href="css/comun.css">
+
+</head>
+
+<body>
+
+<header>
+    <img src="imagenes/logo/logo_ecr_3d.PNG"  alt="Logo ECR 3d">
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html"><img class="icono_menu" src="imagenes/icons/iconfinder_home.png" alt="Inicio">Inicio</a>
+        </li>
+        <li>
+            <a href="educacion.html"><img class="icono_menu" src="imagenes/icons/iconfinder_school.png" alt="Inicio">Educación</a>
+        </li>
+        <li>
+            <a href="proyectos.html"><img class="icono_menu" src="imagenes/icons/iconfinder_folder.png" alt="Inicio">Proyectos</a>
+        </li>
+        <li>
+            <a href="habilidades.html"><img class="icono_menu" src="imagenes/icons/iconfinder_brush-pencil_.png" alt="Inicio">Habilidades</a>
+        </li>
+        <li>
+            <a href="contacto.html"><img class="icono_menu" src="imagenes/icons/iconfinder_contacts.png" alt="Inicio">Contacto</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="contenedor">
+    <fieldset>
+        <legend>Contacto</legend>
+        <form action="envio_correo.html" method="post">
+            <p>
+                <label>Nombre: </label><input type="text" placeholder="Nombre" name="nombre" required value="">
+            </p>
+            <p>
+                <label>Correo: </label><input type="email" placeholder="Correo de contacto" name="correo" required value="">
+            </p>
+            <p>
+                <label>Asunto: </label><input type="text" placeholder="Asunto del contacto" name="asunto" required value="">
+            </p>
+            <p>
+                <label>Mensaje: </label>
+                <textarea name="mensaje" rows="10" cols="30" placeholder="Escribe tu mensaje" required></textarea>
+            </p>
+            <p>
+                <button class="boton boton-gris" type="reset">Reestablecer</button>
+                <button class="boton boton-verde" type="submit">Enviar</button>
+            </p>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mis redes sociales</legend>
+        <a href="https://www.facebook.com/anoroc.euqirne/" target="_blank"><img src="imagenes/facebook.png" width="30" alt="Facebook"></a>
+        <a href="https://www.instagram.com/kiva1909" target="_blank"><img src="imagenes/logo/logo_instagram.jpg" width="30" alt="Instragram"></a>
+        <a href="https://github.com/enriquecr1990" target="_blank"><img src="imagenes/git.png" width="30" alt="GitHub"></a>
+        <a href="https://www.youtube.com/channel/UCgt76DyrKtWPM7m7F5dcbZw" target="_blank"><img src="imagenes/logo/youtube_logo.png" width="30" alt="YouTube"></a>
+        <a href="https://api.whatsapp.com/send?phone=522467575099" target="_blank"><img src="imagenes/logo/whatsapp_logo.jpg" width="30" alt="WhatsApp"></a>
+        <a href="mailto:enrique_cr1990@hotmail.com"><img src="imagenes/logo/outlook.png" width="30" alt="e-mail Hotmail"></a>
+        <a href="mailto:enriquecr1990@gmail.com"><img src="imagenes/logo/gmail_logo.png" width="30" alt="e-mail Gmail"></a>
+    </fieldset>
+</div>
+
+<footer>
+    Diseñado por Enrique Corona 2020 - México &copy;<br>
+    Entregable para la Maestria UNIR
+</footer>
+
+</body>
+
+</html>
