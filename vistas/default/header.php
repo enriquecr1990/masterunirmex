@@ -24,4 +24,6 @@
 </head>
 <body>
 
-<div class="container-fluid mt-3">
+<div id="backgroundImage" class="fullscreen-bg"></div><!-- end div.backgroudImage -->
+
+<div class="container mt-3">

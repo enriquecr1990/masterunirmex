@@ -2,6 +2,8 @@
     <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
+                <img src="sitio_web/imagenes/logo_html5.png" class="card-img-top img_card"
+                     alt="Administración de Servidores Web">
                 <h5 class="card-title">Sitio Web HTML5</h5>
                 <p class="card-text text-justify">
                     El trabajo de esta asignatura consistirá en la realización y entrega de un sitio web
@@ -16,6 +18,8 @@
     <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
+                <img src="sitio_web_css/imagenes/logo_html5_css3.jpg" class="card-img-top img_card"
+                     alt="Administración de Servidores Web">
                 <h5 class="card-title">Sitio Web HTML5 con CSS3</h5>
                 <p class="card-text text-justify">
                     El trabajo de esta asignatura consistirá en la tomar el trabajo previo de HTML5 y aplicar hojas de

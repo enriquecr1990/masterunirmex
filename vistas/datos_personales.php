@@ -1,6 +1,5 @@
 <div class="row">
-    <div class="form-group col-lg-1"></div>
-    <div class="form-group col-lg-10">
+    <div class="form-group col-xl-12">
         <div class="card mb-3">
             <div class="card-body">
                 <div class="row">
@@ -37,5 +36,4 @@
             </div>
         </div>
     </div>
-    <div class="form-group col-lg-1"></div>
 </div>

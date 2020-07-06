@@ -11,7 +11,7 @@
          data-parent="#acordion_semestres">
         <div class="card-body">
             <div class="row">
-                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/servidores_web.jpg" class="card-img-top img_card"
                              alt="Administración de Servidores Web">
@@ -21,11 +21,11 @@
                                 deberá ser capaz de Administrar los Servidores Web Propuestos en la
                                 asignatura, además de estar preparado para enfrentarse a comprender la
                                 administración de cualquier otro servidor que se le proponga</p>
-                            <a href="#" class="btn btn-outline-primary">Ir a Materia</a>
+                            <a href="materias/1er_semestre/asw" class="btn btn-outline-primary">Ir a Materia</a>
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/computacion_cliente_servidor.png" class="card-img-top img_card"
                              alt="Computación, Cliente y Servidor">
@@ -39,24 +39,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/direccion_planificacion_proyectos.jpg"
                              class="card-img-top img_card"
                              alt="Administración de Servidores Web">
                         <div class="card-body">
-                            <h5 class="card-title">Dirección y Planificación de Proyectos</h5>
+                            <h5 class="card-title">Dirección y Planificación de Proyectos Web</h5>
                             <p class="card-text text-justify">Conocer el panorama general de esta nueva profesión, a través del
                                 conocimiento de todos los referentes conceptuales que se pueden
                                 encontrar, y a partir de los cuáles cualquier persona que se enfrente al
                                 reto de «dirigir un proyecto» puede encontrar una ruta útil, práctica, y
                                 aplicable, para establecer las actividades que deben realizarse para
                                 gestión en un camino adecuado el proyecto.</p>
-                            <a href="#" class="btn btn-outline-primary">Ir a Materia</a>
+                            <a href="materias/1er_semestre/dppw" class="btn btn-outline-primary">Ir a Materia</a>
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12 text-center">
+                <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center">
                     <div class="card">
                         <img src="assets/imagenes/lenguajes_estandares_programacion.jpg"
                              class="card-img-top img_card"
