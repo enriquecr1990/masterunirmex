@@ -13,6 +13,8 @@ var tbodyListaContactos = document.getElementById('tbobyListaContactos');
 
 var spnTituloFormulario = document.getElementById('spnTituloFormulario');
 
+var ulMsgSistema = document.getElementById('ulMsgSistema');
+
 //se crea la funcion de iniciar el JS para que cargue toda la logica del JS para que funcione el sistema de Agenda
 function iniciarJS() {
     Principal.index();

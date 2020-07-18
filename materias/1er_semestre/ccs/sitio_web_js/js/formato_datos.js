@@ -15,7 +15,12 @@ var FormatoDatos = {
 
     showMensajesSistema : function(){
         fltMensajesSistema.style.display = 'block';
-        fltMensajesSistema.insertAdjacentHTML('beforeend',FormatoDatos.getHtmlMensajesSistema());
+        ulMsgSistema.innerHTML = FormatoDatos.getHtmlMensajesSistema();
+    },
+
+    ocultarMensajesSistema : function(){
+        fltMensajesSistema.style.display = 'none';
+        Validar.msgValidacion = [];
     },
 
     //funcion para formatear la fecha de cumplieaños a partir de una fecha dada
@@ -82,7 +87,7 @@ var FormatoDatos = {
             '   </td>' +
             '   <td colspan="centrado">' +
             '       <button type="button" class="boton boton-amarillo btnModificarContacto" onclick="Operaciones.modificarContacto(\''+dataContacto+'\')">Modificar</button><br>' +
-            '       <button type="button" class="boton boton-rojo btnEliminarContacto" onclick="Operaciones.modificarContacto(\''+contacto.id+'\')">Eliminar</button>' +
+            '       <button type="button" class="boton boton-rojo btnEliminarContacto" onclick="Operaciones.eliminarContacto(\''+contacto.id+'\')">Eliminar</button>' +
             '   </td>' +
             '</tr>';
     },

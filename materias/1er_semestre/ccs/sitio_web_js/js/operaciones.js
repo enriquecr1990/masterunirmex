@@ -2,14 +2,14 @@ var Operaciones = {
 
     nuevoContacto : function(){
         FormatoDatos.showFormContacto();
-        fltMensajesSistema.style.display = 'none';
+        FormatoDatos.ocultarMensajesSistema();
         spnTituloFormulario.innerHTML = 'Agregar';
         btnLimpiarFormContacto.click();
     },
 
     modificarContacto : function(dataContacto){
         FormatoDatos.showFormContacto();
-        fltMensajesSistema.style.display = 'none';
+        FormatoDatos.ocultarMensajesSistema();
         spnTituloFormulario.innerHTML = 'Modificar';
         /* decodificamos el data de contacto que llego como un string de caracteres codificado en base64 de JS
         * despues lo convertimos en un objeto de contacto
@@ -20,6 +20,7 @@ var Operaciones = {
     },
 
     eliminarContacto : function(idContacto){
+        FormatoDatos.ocultarMensajesSistema();
         var confirmacion = confirm('¿Está seguro de eliminar el contacto?, esta operación no se puede revertir');
         if(confirmacion){
             ValidarComun.agregarMsgValidacion('Se eliminó el contacto con éxito');
@@ -45,6 +46,7 @@ var Operaciones = {
         var confirmacion = confirm('¿Estás seguro de cancelar?, se perderan los cambios realizados');
         if(confirmacion){
             FormatoDatos.showTableroContacto();
+            FormatoDatos.ocultarMensajesSistema();
         }
     }
 };

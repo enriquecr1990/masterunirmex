@@ -68,6 +68,10 @@ select{
 
 .derecha{text-align: right !important;}
 
+td.derecha{
+    text-align: right !important;
+}
+
 .boton{
     width: auto !important;
     min-width: 100px !important;
