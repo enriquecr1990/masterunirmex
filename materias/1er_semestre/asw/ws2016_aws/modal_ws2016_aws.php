@@ -22,7 +22,7 @@
                                     <div class="carousel-inner">
                                         <?php for ($index = 1; $index <= 129; $index++): ?>
                                             <div class="carousel-item <?=$index == 1? 'active':''?>">
-                                                <img src="ws2016_aws/imagenes/ws_2016_aws/<?=$index < 10 ? '0':''?><?=$index < 100 ? '0':''?><?=$index?>" class="d-block w-100" alt="Evidencia Windows Server 2016">
+                                                <img src="ws2016_aws/imagenes/ws_2016_aws/<?=$index < 10 ? '0':''?><?=$index < 100 ? '0':''?><?=$index?>.png" class="d-block w-100" alt="Evidencia Windows Server 2016">
                                             </div>
                                         <?php endfor; ?>
                                         <a class="carousel-control-prev" href="#carousel_windows_server_2016" role="button" data-slide="prev">
