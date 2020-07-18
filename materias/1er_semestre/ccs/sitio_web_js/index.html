@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- etiqueta meta para especificar lo de un sitio web responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta name="author" content="Enrique Corona Ricaño">
+    <meta name="description"
+          content="Tarea Realización de una pagina web con JavaScript de la materia de Computación, cliente y servidor">
+    <meta name="keywords"
+          content="Enrique Corona Ricaño, Estudiante de Maestria ecoronar en UNIR México, Maestría en Dirección e Ingenieria de Sitios Web ">
+
+    <title>Sitio Web JavaScript</title>
+
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="icon" href="imagenes/logo/logo_html_css_js.jpg">
+
+</head>
+<!-- por medio del js se procesan los catalogos utilizados en el formulario -->
+<body onload="iniciarJS()">
+
+<h1 class="centrado" >
+    <img class="img_agenda" src="imagenes/logo/logo_agenda.jpg" alt="Logo Agenda">
+    <span id="titulo_sistema">Sistema para Agenda Telefónica</span>
+    <img class="img_agenda" src="imagenes/logo/logo_agenda.jpg" alt="Logo Agenda">
+</h1>
+
+<!-- fieldset para los mensajes del sistema -->
+<fieldset id="fltMensajesSistema">
+    <legend>Mensajes del sistema</legend>
+</fieldset>
+
+<!-- fieldset para el listado de contactos -->
+<fieldset id="fltListaContactos" class="derecha">
+    <legend>Listado de contactos</legend>
+
+    <button id="btnNuevoContacto" class="boton boton-verde derecha" type="button">Nuevo Contacto</button>
+    <hr>
+
+    <table id="tblListaContactos" class="table table-even">
+        <thead>
+        <tr>
+            <td>#</td>
+            <td>Nombre completo</td>
+            <td>Genero</td>
+            <td>Cumpleaños</td>
+            <td>Número(s)</td>
+            <td>Contacto</td>
+            <td></td>
+        </tr>
+        </thead>
+        <!-- tbody de la tabla que contendra los registros de contactos, estos se llenan a partir del JS -->
+        <tbody id="tbobyListaContactos">
+        </tbody>
+    </table>
+</fieldset>
+
+<!-- fieldset para el formulario de contacto -->
+<fieldset id="fltFormularioContacto">
+    <legend><span id="spnTituloFormulario"></span> de Contacto</legend>
+    <form id="frmRegistroContacto" method="post">
+        <table class="table">
+            <tr>
+                <td>
+                    <input type="hidden" id="idContacto" name="id" value="">
+                    <strong>Nombre:</strong>
+                </td>
+                <td><input type="text" placeholder="Nombre" name="nombre" id="nombre" value="" required></td>
+                <td><strong>Apellido Paterno:</strong></td>
+                <td><input type="text" placeholder="Paterno" name="paterno" id="paterno" value="" required></td>
+            </tr>
+            <tr>
+                <td><strong>Apellido Materno:</strong></td>
+                <td><input type="text" placeholder="Materno" name="materno" value="" id="materno" required></td>
+                <td><strong>Genero:</strong></td>
+                <td>
+                    <input id="rdoMasculino" type="radio" name="idGenero" value="1" required> Masculino
+                    <input id="rdoFemenino" type="radio" name="idGenero" value="2"> Femenino
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Fecha de nacimiento:</strong></td>
+                <td><input type="date" name="nacimiento" id="nacimiento" value="" required></td>
+                <td><strong>Número de telefono:</strong></td>
+                <td>
+                    <!-- las opciones se llenan por medio del JS cuando se carga el JS -->
+                    <select name="idTipoTelefono" id="sltTipoTelefono" required>
+                        <option value="">--Seleccione tipo--</option>
+                    </select>
+                    <input type="text" placeholder="Número de telefono" name="numeroTelefono" value="" id="numeroTelefono" required>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>e-mail:</strong></td>
+                <td><input type="email" placeholder="Correo Electrónico" name="correo" value="" id="correo" required></td>
+                <td><strong>Facebook</strong></td>
+                <td><input type="url" placeholder="Link de Facebook" name="facebook" value="" id="facebook" required></td>
+            </tr>
+            <tr>
+                <td class="izquierda">
+                    <button id="btnLimpiarFormulario" class="boton boton-gris" type="reset">Limpiar formulario</button>
+                </td>
+                <td colspan="3" class="derecha">
+                    <button id="btnGuardarFormContacto" class="boton boton-verde" type="button">Guardar</button>
+                    <button id="btnCancelarFormContacto" class="boton boton-rojo" type="button">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+<!-- scripts necesarios para poder tener su funcionalidad correcta -->
+<script src="js/catalogos.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/validar.js"></script>
+<script src="js/formato_datos.js"></script>
+<script src="js/operaciones.js"></script>
+<script src="js/principal.js"></script>
+
+</body>
+
+</html>
+
+<!--
+Mistema de contactos que tiene funcionalidad tipo CRUD (Consultar, Registrar, Actualizar y Eliminar) registros;
+este sistema al ser en código duro sin uso de una Base de Datos se le conoce como Sistema Dummy.
+1.  En la pantalla principal se muestra un tablero de 3 registros de contactos hardcodeados (funcionalidad de consultar).
+2.  En el index del sitio se aprecia el botón “Nuevo Contacto” que al dar clic se mostrará un formulario de contacto
+    (se usa para nuevo y modificar) y en los registros el botón de modificar y eliminar.
+3.  Para el nuevo/modificar contacto, se hacen uso de las validaciones de lado del cliente en HTML5 y por JavaScript
+    el formulario de contacto, para los apellidos, telefeno, correo, link de Facebook se hace uso de expresiones
+    regulares para aceptar cierto tipo de formatos en los campos. Los datos de modificar
+4.  La información de modificar/eliminar/datos de contacto, viajan van codificados en Base64 para pasar un objeto al JS.
+5.  Los JavaScript estan divididos conforme al tipos de operaciones que realiza cada JS, como los catalogos, los datos
+    que podrian ser las opciones de guardar, los eventos de los elementos DOM del HTML y el formateo de datos a HTML.
+ -->

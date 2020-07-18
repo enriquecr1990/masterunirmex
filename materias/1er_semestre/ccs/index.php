@@ -24,10 +24,12 @@
 </head>
 <body>
 
-<div class="container-fluid mt-3">
+<div id="backgroundImage" class="fullscreen-bg"></div>
+
+<div class="container mt-3">
     <div class="row">
         <div class="form-group col-lg-12 col-md-12 text-center font-weight-bold ">
-            <div class="alert alert-primary">Computación, Cliente y Servidor</div>
+            <span class="titulo_css">Computación, Cliente y Servidor</span>
         </div>
     </div>
 

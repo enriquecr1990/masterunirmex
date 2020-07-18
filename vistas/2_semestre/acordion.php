@@ -10,7 +10,7 @@
     <div id="segundo_semestre" class="collapse" aria-labelledby="header_segundo_semestre"
          data-parent="#acordion_semestres">
         <div class="card-body">
-            Contenido del 2do semestre
+            <img src="assets/imagenes/en_construccion.jpg" class="img-fluid" alt="Sitio en construcción">
         </div>
     </div>
 </div>

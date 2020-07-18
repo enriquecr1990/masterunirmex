@@ -4,9 +4,7 @@
 
     <div class="row">
         <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center font-weight-bold ">
-            <div class="alert alert-primary">
-                Lic. en Informática - Estudiante de Maestria en Dirección e Ingeniería de Sitios Web
-            </div>
+            <span class="titulo_css">Lic. en Informática - Estudiante de Maestria en Dirección e Ingeniería de Sitios Web</span>
         </div>
     </div>
 

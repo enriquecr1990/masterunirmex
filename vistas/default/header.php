@@ -24,6 +24,6 @@
 </head>
 <body>
 
-<!--<div id="backgroundImage" class="fullscreen-bg"></div><!-- end div.backgroudImage -->
+<div id="backgroundImage" class="fullscreen-bg"></div>
 
 <div class="container mt-3">

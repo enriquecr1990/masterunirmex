@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12">
+    <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
                 <img src="sitio_web/imagenes/logo_html5.png" class="card-img-top img_card"
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="form-group col-xl-3 col-lg-4 col-md-6 col-sm-12">
+    <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12">
         <div class="card">
             <div class="card-body">
                 <img src="sitio_web_css/imagenes/logo_html5_css3.jpg" class="card-img-top img_card"

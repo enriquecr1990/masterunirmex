@@ -10,7 +10,7 @@
     <div id="tercer_semestre" class="collapse" aria-labelledby="header_tercer_semestre"
          data-parent="#acordion_semestres">
         <div class="card-body">
-            Contenido del tercer semestre
+            <img src="assets/imagenes/en_construccion.jpg" class="img-fluid" alt="Sitio en construcción">
         </div>
     </div>
 </div>

@@ -1,6 +1,4 @@
-body{
-    background-color: #e3e2e2;
-}
+
 .img_card{
     max-height: 200px !important;
 }
@@ -15,16 +13,14 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: lightgray;
-    background-image: url('../../assets/logo/favicon.PNG');
+    background-image: url('../../assets/fondo/chess_02.jpg');
     background-repeat: round;
-    background-size: 8%;
+    background-size: 100%;
     /*-webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
     -o-transform: rotate(10deg);
     transform: rotate(-10deg);*/
-    opacity: 0.2;
     filter:alpha(opacity=10);
     height:100% !important;
     width:100% !important;
@@ -59,4 +55,11 @@ body{
 
 .modal-xlg{
     max-width: 85%;
+}
+
+.titulo_css{
+    color:ghostwhite;
+    font-size: 35px;
+    font-family: "Agency FB";
+    text-shadow: 2px 2px 10px yellow;
 }
