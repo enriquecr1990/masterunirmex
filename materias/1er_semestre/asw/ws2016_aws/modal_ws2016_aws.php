@@ -39,6 +39,7 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="row">
                     <div class="form-group col-xl-12">
                         <div class="card">
@@ -51,6 +52,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
