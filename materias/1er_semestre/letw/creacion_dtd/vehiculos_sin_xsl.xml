@@ -95,4 +95,17 @@ Para una de las ramificaciones use una general que se usa para la moto, carro y 
 donde se encuentran todos los atributos comunes de cada automovil (marca, modelo, color, precio, kilometraje y descripcion)
 ya por cada tipo tendra elementos adicionales que difieren entre cada vehiculo como el tipo de camioneta o el tipo de carro
 
+1.	Tipos de declaracion usado: ELEMENT, ATTLIST, NOTATION (la notacion la use para el sistema de archivos de imagen),
+ 	ENTITY (Para el entity lo agregue en el DOCTYPE del xml)
+2.	Elemento usados: PCDATA, EMPTY, MIXED, ELEMENT (Los element son asiganacion a otro elemento)
+3.	Los tipos de atributos usados:
+	CDATA: usado para el atributo de automovil para los archivos de imagen,
+	NMTOKEN: usado para declarar la compañiaa al nodo de concesionaria (solo permite caracteres sin espacio)
+	NMTOKENS: usado para declarar los tipos de vehiculos disponbiles en el listado de vehiculos (permite caracteres y espacios en blanco)
+4.	Enumeracion separada por
+	ID: identificador unico para moto, carro y camioneta
+	IDREF: identificador usado para indicar que modelo de carro se tomo para mejorarlo
+		en el ejemplo se tomo que el FORD Fusion 2020 se mejoro del carro FORD fusion 2019
+		lo podemos interpretar como si el Ford Fusion 2020 es un hijo del Ford Fusion 2019
+
 -->
