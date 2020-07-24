@@ -1,0 +1,57 @@
+<!--
+Document Type Definition DTD
+1.  DTD para la Concesionaria de autos donde la rama principal es Concesionaria, donde Tendra como NMTOKEN
+    el nombre de la compañia
+2.  Tiene como elementos hijos ListaVehiculos (de cero a uno elementos) y PiePagina (solamente es un PCDATA)
+3.  Para la rama ListaVehiculos donde tendra como NMTOKENS los tipos de vehiculos que ofrece la concesionaria,
+    un elemento de Motos, Carros o Camionetas.
+4.  Para la rama de Motos tendra por lo menos un elemento de Moto.
+5.  Para la rama de Moto tendra el elemento Automovil y tiene como atributo el motoID el cual es unico
+6.  Para la rama de Carros tendra por lo menos un elemento de Carro
+7.  Para la rama de Carro tendra el elemento Automovil, el atrituto carroID y el elemento TipoCarro (elemento EMPTY)
+    y esté ultimo tendra el atributo Diseno con posibles valores: Coupe|Hatchback|Sedan|Convertible
+8.  Para la rama de Camionetas tendra por lo menos un elemento Camioneta
+9.  Para la rama de Camioneta tendra el elemento Automovil, el atributo camionetaID y el elemento
+    TipoCamioneta (elemento EMPTY) y esté ultimo tendra el atritubo Diseno con los posibles valores:
+    Carga|Minivan|4x4|DobleCabina
+10. Para el elemento de Automovil es donde tiene todos los elementos basicos como Marca, modelo, anio, version, color,
+    kilometraje y la descripcion del automovil, tiene como atributos si su condicion es nuevo|seminuevo y cual es su
+    transmisión, ademas de haber agregado las notaciones para el tratado de imagenes del automovil
+ -->
+<!ELEMENT Concesionaria (ListaVehiculos?, PiePagina?) >
+    <!ATTLIST Concesionaria Compania NMTOKEN #REQUIRED>
+
+    <!ELEMENT ListaVehiculos (Motos?,Carros?,Camionetas?)>
+        <!ATTLIST ListaVehiculos TiposVehiculos NMTOKENS #REQUIRED >
+        <!ELEMENT Motos (Moto+) >
+            <!ELEMENT Moto (Automovil) >
+            <!ATTLIST Moto motoID ID #REQUIRED >
+        <!ELEMENT Carros (Carro+) >
+            <!ELEMENT Carro (Automovil,TipoCarro) >
+            <!ATTLIST Carro carroID ID #REQUIRED mejoraCarroID IDREF #IMPLIED >
+            <!ELEMENT TipoCarro EMPTY >
+            <!ATTLIST TipoCarro Diseno (Coupe|Hatchback|Sedan|Convertible) #REQUIRED>
+        <!ELEMENT Camionetas (Camioneta) >
+            <!ELEMENT Camioneta (Automovil,TipoCamioneta) >
+            <!ATTLIST Camioneta camionetaID ID #REQUIRED>
+            <!ELEMENT TipoCamioneta EMPTY >
+            <!ATTLIST TipoCamioneta Diseno (Carga|Minivan|4x4|DobleCabina) #REQUIRED>
+
+    <!ELEMENT Automovil (Marca, Modelo, Color, Precio, Kilometraje, Descripcion ) >
+        <!ATTLIST Automovil Condicion (Nuevo | Seminuevo) #REQUIRED>
+        <!ATTLIST Automovil Transmision (Manual | Automatico) #REQUIRED >
+        <!ATTLIST Automovil Imagen CDATA #IMPLIED
+                TipoImagen NOTATION (jpg | png) #IMPLIED >
+        <!ELEMENT Marca (#PCDATA) >
+        <!ELEMENT Modelo (#PCDATA|Anio|Version)* >
+        <!ELEMENT Anio (#PCDATA) >
+        <!ELEMENT Version (#PCDATA) >
+        <!ELEMENT Color (#PCDATA) >
+        <!ELEMENT Precio (#PCDATA) >
+        <!ELEMENT Kilometraje (#PCDATA) >
+        <!ELEMENT Descripcion (#PCDATA) >
+
+        <!NOTATION jpg SYSTEM "image/jpeg" >
+        <!NOTATION png SYSTEM "image/png" >
+
+    <!ELEMENT PiePagina (#PCDATA) >

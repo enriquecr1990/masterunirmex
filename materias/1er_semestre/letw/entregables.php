@@ -30,4 +30,20 @@
             </div>
         </div>
     </div>
+
+    <div class="form-group col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <img src="creacion_dtd/imagenes/logo_dtd.svg" class="card-img-top img_card"
+                     alt="Administración de Servidores Web">
+                <h5 class="card-title">Creacion de una DTD</h5>
+                <p class="card-text text-justify">
+                    El trabajo de esta asignatura consistirá en crear una DTD que contenga por lo menos un tipo de declaración: ELEMENT, ATTLIST, ENTITY.
+                    En las declaraciones ELEMENT deben existir elementos PCDATA, EMPTY, MIXED, ELEMENT.
+                </p>
+                <a href="creacion_dtd/vehiculos_sin_xsl.xml" target="_blank" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Ver tarea sin XSL</a>
+                <a href="creacion_dtd/vehiculos_con_xsl.xml" target="_blank" class="btn btn-outline-secondary"><i class="fa fa-eye"></i> Ver tarea XSL</a>
+            </div>
+        </div>
+    </div>
 </div>

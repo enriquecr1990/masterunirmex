@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="xsl/vehiculos.xsl" ?>
+<!DOCTYPE Concesionaria SYSTEM "dtd/vehiculos.dtd" [
+		<!ENTITY Alumno "Enrique Corona Ricaño">
+		<!ENTITY Materia "Lenguajes, Estándares y Tecnologías para la Web">
+		]>
+<Concesionaria Compania="EnriqueAsociados">
+	<ListaVehiculos TiposVehiculos="Motos Carros Camionetas">
+		<Motos>
+			<Moto motoID="Moto1">
+				<Automovil Condicion="Nuevo" Transmision="Manual" Imagen="imagenes/yamaha-mt15.jpg" TipoImagen="jpg">
+					<Marca>Yamaha</Marca>
+					<Modelo>
+						MT-15
+						<Anio>2020</Anio>
+					</Modelo>
+					<Color>Rojo con Negro</Color>
+					<Precio>85999.99</Precio>
+					<Kilometraje>0</Kilometraje>
+					<Descripcion>Con un motor de alta tecnología, una carrocería compacta y un diseño propio de la linea MT de próxima generación, esta nueva y emocionante motocicleta no tiene comparación. Prepárate para activar tu lado oscuro. Porque esta ligera Hyper Naked va a transformar tu mundo. La nueva MT-15, gracias a su aspecto agresivo, demuestra toda su actitud incluso cuando no se mueve. Las nuevas y llamativas luces de posición dobles aportan a esta Hyper Naked ultraligera el aspecto más intimidante de su categoría. La robusta carrocería echada hacia adelante parece lista para atacar en cualquier momento. </Descripcion>
+				</Automovil>
+			</Moto>
+		</Motos>
+		<Carros>
+			<Carro carroID="cSpark2021">
+				<Automovil Condicion="Nuevo" Transmision="Manual" Imagen="imagenes/chevrolet-spark-2020.png" TipoImagen="png">
+					<Marca>Chevrolet</Marca>
+					<Modelo>
+						Spark
+						<Anio>2021</Anio>
+						<Version>LS 3 Cilindros</Version>
+					</Modelo>
+					<Color>Azul Metálico</Color>
+					<Precio>183700.00</Precio>
+					<Kilometraje>0</Kilometraje>
+					<Descripcion>Chevrolet Spark es el auto para ti, pues gracias a su tecnología y equipamiento te da info-entretenimiento, conectividad y seguridad únicos.</Descripcion>
+				</Automovil>
+				<TipoCarro Diseno="Hatchback" />
+			</Carro>
+			<Carro carroID="fFusion2019">
+				<Automovil Condicion="Seminuevo" Transmision="Automatico" Imagen="imagenes/ford-fusion-2019-sedan.jpg" TipoImagen="jpg">
+					<Marca>Ford</Marca>
+					<Modelo>
+						Fusion
+						<Anio>2019</Anio>
+					</Modelo>
+					<Color>Azul Marino Metalizado</Color>
+					<Precio>175999.00</Precio>
+					<Kilometraje>30000</Kilometraje>
+					<Descripcion>Déjate cautivar por Ford Fusion 2020, auto sedán de espectacular, el conjunto de tecnologías pensadas para brindarte una experiencia de conducción llena de confort, dinamismo y seguridad al máximo. ¡Descúbrelo! </Descripcion>
+				</Automovil>
+				<TipoCarro Diseno="Sedan" />
+			</Carro>
+			<Carro  carroID="fFusion2020" mejoraCarroID="fFusion2019">
+				<Automovil Condicion="Nuevo" Transmision="Manual" Imagen="imagenes/ford-fusion-2020-sedan.jpg" TipoImagen="jpg">
+					<Marca>Ford</Marca>
+					<Modelo>
+						Fusion
+						<Anio>2020</Anio>
+					</Modelo>
+					<Color>Blanco</Color>
+					<Precio>265800.00</Precio>
+					<Kilometraje>0</Kilometraje>
+					<Descripcion>Déjate cautivar por Ford Fusion 2020, auto sedán de espectacular Diseño equipado con Co-Pilot360, el conjunto de tecnologías pensadas para brindarte una experiencia de conducción llena de confort, dinamismo y seguridad al máximo. ¡Descúbrelo! </Descripcion>
+				</Automovil>
+				<TipoCarro Diseno="Sedan" />
+			</Carro>
+		</Carros>
+		<Camionetas>
+			<Camioneta camionetaID="camioneta0001">
+				<Automovil Condicion="Nuevo" Transmision="Manual" Imagen="imagenes/ford-ranger-2020.jpg" TipoImagen="jpg" >
+					<Marca>Ford</Marca>
+					<Modelo>
+						Ranger
+						<Anio>2020</Anio>
+					</Modelo>
+					<Color>Azul Metalizado</Color>
+					<Precio>424600.00</Precio>
+					<Kilometraje>0</Kilometraje>
+					<Descripcion>Ya sea que conduzcas por placer o trabajo, Ford Ranger 2020 tiene el Poder y Resistencia necesarios para acompañarte en cualquier actividad. ¡Ford Ranger 2020 tiene todo lo que deseas de una Camioneta Pick Up!</Descripcion>
+				</Automovil>
+				<TipoCamioneta Diseno="DobleCabina" />
+			</Camioneta>
+		</Camionetas>
+	</ListaVehiculos>
+	<PiePagina>
+		Estudiante: &Alumno; - Materia: &Materia;
+	</PiePagina>
+</Concesionaria>
+
+<!--
+las entidades se cargaron en las cabeceras del doctype en donde carga el DTD para el xml
+El DTD que se creo se hizo en base a una posible informacion que manejaria una Concesionaria de automoviles,
+tanto de nuevos como usados; estan categorizados por motos, carros y camionetas.
+
+Para una de las ramificaciones use una general que se usa para la moto, carro y camioneta la cual es Automovil
+donde se encuentran todos los atributos comunes de cada automovil (marca, modelo, color, precio, kilometraje y descripcion)
+ya por cada tipo tendra elementos adicionales que difieren entre cada vehiculo como el tipo de camioneta o el tipo de carro
+
+1.	Tipos de declaracion usado: ELEMENT, ATTLIST, NOTATION (la notacion la use para el sistema de archivos de imagen),
+ 	ENTITY (Para el entity lo agregue en el DOCTYPE del xml)
+2.	Elemento usados: PCDATA, EMPTY, MIXED, ELEMENT (Los element son asiganacion a otro elemento)
+3.	Los tipos de atributos usados:
+	CDATA: usado para el atributo de automovil para los archivos de imagen,
+	NMTOKEN: usado para declarar la compañiaa al nodo de concesionaria (solo permite caracteres sin espacio)
+	NMTOKENS: usado para declarar los tipos de vehiculos disponbiles en el listado de vehiculos (permite caracteres y espacios en blanco)
+4.	Enumeracion separada por
+	ID: identificador unico para moto, carro y camioneta
+	IDREF: identificador usado para indicar que modelo de carro se tomo para mejorarlo
+		en el ejemplo se tomo que el FORD Fusion 2020 se mejoro del carro FORD fusion 2019
+		lo podemos interpretar como si el Ford Fusion 2020 es un hijo del Ford Fusion 2019
+-->
