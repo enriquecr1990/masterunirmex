@@ -20,7 +20,7 @@
                             <div class="card-body">
                                 <div id="carousel_windows_server_2016" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <?php for ($index = 1; $index <= 129; $index++): ?>
+                                        <?php for ($index = 1; $index <= 131; $index++): ?>
                                             <div class="carousel-item <?=$index == 1? 'active':''?>">
                                                 <img src="ws2016_aws/imagenes/ws_2016_aws/<?=$index < 10 ? '0':''?><?=$index < 100 ? '0':''?><?=$index?>.png" class="d-block w-100" alt="Evidencia Windows Server 2016">
                                             </div>
