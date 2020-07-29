@@ -1,5 +1,7 @@
 <?php
 
+//se cargan los helpers para la validacion de campos y formato de campos obtenidos de la BD
+//ademas de cargar el modelo de contacto para sus operaciones en la BD
 require_once '../modelo/ContactoModelo.php';
 require_once '../helper/comun.php';
 require_once '../helper/FormValidacionHelper.php';
@@ -12,6 +14,7 @@ class ContactoFunciones{
         $this->contactoModel = new ContactoModelo();
     }
 
+    //funcion para devolver el arreglo de contactos encontrados en la BD
     public function getListaContactos(){
         $formContactoBusqueda = $_POST;
         $contactos = $this->contactoModel->getListaContactos($formContactoBusqueda);
@@ -22,6 +25,7 @@ class ContactoFunciones{
         return $contactos;
     }
 
+    //funcion para devolver el arreglo de la operacion de guardar/actualizar contacto
     public function guardarNuevoActualizarContacto(){
         $response['success'] = false;
         $response['msg'] = array();
@@ -38,6 +42,7 @@ class ContactoFunciones{
         return $response;
     }
 
+    //funcion para devolver el arreglo de la operacion de eliminar contacto
     public function eliminarContacto($idContacto){
         $response['success'] = true;
         $response['msg'] = array('Se eliminó el contacto correctamente');

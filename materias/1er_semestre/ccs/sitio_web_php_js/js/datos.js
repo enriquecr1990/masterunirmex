@@ -29,7 +29,7 @@ var Datos = {
         );
     },
 
-    setFormalarioContacto : function(contacto, esNuevo = true){
+    setFormalarioContacto : function(contacto){
         document.getElementById('idContacto').value = contacto.id;
         document.getElementById('nombre').value = contacto.nombre;
         document.getElementById('paterno').value = contacto.paterno;

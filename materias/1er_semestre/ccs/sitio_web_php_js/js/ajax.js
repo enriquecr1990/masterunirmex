@@ -7,9 +7,8 @@ url: direccion donde se ira la peticion ajax
 funcionReady: es la funcion que realizara el JS una vez tenida la respuesta del js, esta funcion se recibe
     desde donde fue invocada
 idFormulario: si existe el campo tomara los datos del formulario para enviarlo
-extraData: si existen datos complementarios al formulario aqui se reciben para procesarlos despuesta a la peticion ajax
 * */
-function peticion(tipo,url,funcionReady,idFormulario = false ,extraData = []){
+function peticion(tipo,url,funcionReady,idFormulario = false){
     //creamos el objetos httprequets dependiendo del tipo de navegador
     if(window.XMLHttpRequest){//Para peticiones mozilla, safari
         httpRequets = new XMLHttpRequest();

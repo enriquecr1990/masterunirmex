@@ -34,12 +34,14 @@ class DB
         }
     }
 
+    //destructor de la configuracion de la BD y de la clase de mysqli de PHP
     function __destruct()
     {
         $this->dbConfig = null;
         $this->mysqli = null;
     }
 
+    //preparamos la consulta nativa de SQL
     public function consulta($consulta){
         try{
             $this->sentencia = $this->mysqli->query($consulta);
@@ -49,6 +51,10 @@ class DB
         }
     }
 
+    /* insertamos un registro en la BD, necesita el nombre de la tabla,
+     * y un array de con los datos a insertar en la tabla, para que funcione el array
+     * deberia tener un formato como este array('nombre_columna' => 'valor_columna')
+     * */
     public function insertarRegistro($tabla,$values){
         try{
             //obtenemos las llaves y los valores a insertar
@@ -64,6 +70,12 @@ class DB
         }
     }
 
+    /* actualizamos un registro en la BD, necesita el nombre de la tabla,
+     * un array de con los datos a actualizar en la tabla, para que funcione el array
+     * deberia tener un formato como este array('nombre_columna' => 'valor_columna')
+     * y un array con los datos condicionales del update (similar al de los valores)
+     * array('nombre_columna_actualizar' => 'valor_columna_actualizar')
+     * */
     public function actualizarRegistro($tabla,$valuesUpdate,$condicionales){
         try{
             $dataUpdate = $this->getClavesValoresCondicionalesUpdate($valuesUpdate,$condicionales);
@@ -77,6 +89,10 @@ class DB
         }
     }
 
+    /* funciona para eliminar un registro de la tabla, para funcionar unicamente necesitamos el nombre de la tabla de
+     * la BD y las condiciones para que se elimine el registro, los datos condicionales del delete es
+     * array('nombre_columna_actualizar' => 'valor_columna_actualizar')
+     * */
     public function eliminarRegistro($tabla,$condionales){
         try{
             $condionalesDelete = $this->getCondicionalesUpdateDelete($condionales);
@@ -87,16 +103,9 @@ class DB
         }
     }
 
+    //funcion que devolvera el ultimo id registrado en el sistema
     public function getUltimoIdInsertado(){
         return $this->mysqli->insert_id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNumeroRegistros()
-    {
-        return $this->numeroRegistros;
     }
 
     //funcion para retornar el resultado de la consulta en un arreglo de objetos
@@ -159,12 +168,14 @@ class DB
         return array('llaves' => $keys,'valores' => $values);
     }
 
+    //funcion que devuelve los sets y las condicionales del update de la tabla ya formateados a SQL Nativo
     protected function getClavesValoresCondicionalesUpdate($valoresUpdate,$conditionalesUpdate){
         $sets = $this->getValoresUpdate($valoresUpdate);
         $cdtls = $this->getCondicionalesUpdateDelete($conditionalesUpdate);
         return array('sets' => $sets,'cdtls' => $cdtls);
     }
 
+    //devuelve los set formateados del update en SQL nativo
     protected function getValoresUpdate($valuesUpdate){
         $sets = '';
         $index = 1;$max = sizeof($valuesUpdate);
@@ -179,6 +190,7 @@ class DB
         return $sets;
     }
 
+    //devuelve los condicionales where necesarios para hacer el delete o update en SQL nativo
     protected function getCondicionalesUpdateDelete($conditionals){
         $index = 1;
         $cdtls = '';
