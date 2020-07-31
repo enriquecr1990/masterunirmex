@@ -10,12 +10,13 @@
                     <td>
                         <input id="buscarRdoMasculino" type="radio" name="buscar_id_genero" value="1"> Masculino
                         <input id="buscarRdoFemenino" type="radio" name="buscar_id_genero" value="2"> Femenino
+                        <input id="buscarRdoFemenino" type="radio" name="buscar_id_genero" value="" checked> Todos
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Número de telefono:</strong></td>
                     <td>
-                        <input type="text" placeholder="Número de telefono" name="buscar_numeroTelefono" value="" id="buscar_numeroTelefono" required>
+                        <input type="text" placeholder="Número de telefono" name="buscar_numeroTelefono" maxlength="18" value="" id="buscar_numeroTelefono" required>
                     </td>
                     <td class="busqueda_avanzada" style="display: none;"><strong>Fecha de nacimiento:</strong></td>
                     <td class="busqueda_avanzada" style="display: none;"><input type="date" name="buscar_nacimiento" id="buscar_nacimiento" value="" required></td>
@@ -36,6 +37,7 @@
                 </tr>
                 <tr>
                     <td colspan="4" style="text-align: right !important;">
+                        <button id="btnLimpiarFormBusquedaContacto" class="boton boton-gris" type="reset">Limpiar Formulario</button>
                         <button id="btnBuscarFormContacto" class="boton boton-verde" type="button">Buscar</button>
                     </td>
                 </tr>

@@ -13,11 +13,11 @@ class FormValidacionHelper {
             $validacion['success'] = false;
             $validacion['msg'][] = 'El campo nombre es requerido (solo letras)';
         }if((isset($formulario['paterno']) && self::isCampoVacio($formulario['paterno']))
-            || !self::isValidRegex($formulario['paterno'],'/^[a-zA-Zñ]*$/')){
+            || !self::isValidRegex($formulario['paterno'],'/^[a-zA-Zñ ]*$/')){
             $validacion['success'] = false;
             $validacion['msg'][] = 'El campo apellido paterno es requerido (letras y sin espacios)';
         }if((isset($formulario['materno']) && self::isCampoVacio($formulario['materno']))
-            || !self::isValidRegex($formulario['materno'],"/^[a-zA-ZñÑ]*$/")){
+            || !self::isValidRegex($formulario['materno'],"/^[a-zA-ZñÑ ]*$/")){
             $validacion['success'] = false;
             $validacion['msg'][] = 'El campo apellido materno es requerido (letras y sin espacios)';
         }if(isset($formulario['idGenero']) && self::isCampoVacio($formulario['idGenero'])){

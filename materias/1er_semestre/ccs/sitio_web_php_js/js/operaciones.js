@@ -73,6 +73,7 @@ var Operaciones = {
                     if(response.success){
                         FormatoDatos.showTableroContacto();
                         Datos.getDatosListaContacto();
+                        btnLimpiarFormContacto.click();
                     }
                 }
             },'frmRegistroContacto');
@@ -84,6 +85,7 @@ var Operaciones = {
         if(confirmacion){
             FormatoDatos.showTableroContacto();
             FormatoDatos.ocultarMensajesSistema();
+            btnLimpiarFormContacto.click();
         }
     }
 };

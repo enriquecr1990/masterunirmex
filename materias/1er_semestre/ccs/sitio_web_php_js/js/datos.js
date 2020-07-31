@@ -23,6 +23,7 @@ var Datos = {
                         });
                     }
                     tbodyListaContactos.innerHTML = htmlListaContactos;
+                    btnLimpiarFormContactoBusqueda.click();
 
                 }
             },'frmBusquedaContacto'

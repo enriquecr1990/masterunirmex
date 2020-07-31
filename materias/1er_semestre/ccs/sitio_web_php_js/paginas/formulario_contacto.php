@@ -31,7 +31,7 @@
                         <select name="idTipoTelefono" id="sltTipoTelefono" required>
                             <option value="">--Seleccione tipo--</option>
                         </select>
-                        <input type="text" placeholder="Número de telefono" name="numeroTelefono" value="" id="numeroTelefono" required>
+                        <input type="text" placeholder="Número de telefono" name="numeroTelefono" maxlength="18" value="" id="numeroTelefono" required>
                     </td>
                 </tr>
                 <tr>

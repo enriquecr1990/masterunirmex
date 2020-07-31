@@ -9,6 +9,7 @@ var btnNuevoContacto = document.getElementById('btnNuevoContacto');
 var btnGuardarContacto = document.getElementById('btnGuardarFormContacto');
 var btnCancelarRegistro = document.getElementById('btnCancelarFormContacto');
 var btnLimpiarFormContacto = document.getElementById('btnLimpiarFormulario');
+var btnLimpiarFormContactoBusqueda = document.getElementById('btnLimpiarFormBusquedaContacto');
 var btnBuscarListaContacto = document.getElementById('btnBuscarFormContacto');
 var lnkBusquedaAvanzada = document.getElementById('lnkBusquedaAvanzada');
 
