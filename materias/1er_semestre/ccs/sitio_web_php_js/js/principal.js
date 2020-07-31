@@ -81,6 +81,6 @@ var Principal = {
         //manejamos el setTimeOut para darle tiempo de terminar de cargar el catalogo de tipo telefono que se utilizara
         setTimeout(function(){
             Datos.getDatosListaContacto();
-        },500);
+        },1000);
     },
 };
