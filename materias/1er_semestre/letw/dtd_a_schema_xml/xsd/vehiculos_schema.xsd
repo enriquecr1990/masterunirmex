@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--
+        elemento raiz de la schema xml, en este caso se llama concesionaria
+        tiene como atributo el nombre de la Compañia
+        y como elementos ListaVehiculos y el PiePagina
+    -->
+    <xs:element name="Concesionaria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ListaVehiculos"/>
+                <xs:element ref="PiePagina"/>
+            </xs:sequence>
+            <xs:attribute name="Compania" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- el elemento lista de vehiculos que es uno hijo del de Concesionaria,
+         este elemento contiene como atributo el tipo de vehiculos y como elementos
+         hijos: Motos, Carros y Camionetas -->
+    <xs:element name="ListaVehiculos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Motos"/>
+                <xs:element ref="Carros"/>
+                <xs:element ref="Camionetas"/>
+            </xs:sequence>
+            <xs:attribute name="TiposVehiculos" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- Elemento Motos que es uno hijo del de Lista Vehiculos
+     Tiene como elemento Hijo la Moto-->
+    <xs:element name="Motos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Moto" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Elemento moto que tiene como atributo motoID y como elemento hijo automovil -->
+    <xs:element name="Moto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Automovil"/>
+            </xs:sequence>
+            <xs:attribute name="motoID" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Carros que es uno hijo del de Lista Vehiculos
+     Tiene como elemento Hijo la Carro-->
+    <xs:element name="Carros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Carro" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- elemento carro que tiene como atributos carroID y mejoraCarroID
+     tiene como elementos hijos el Automovil y tipo Carro el cual tiene el diseño-->
+    <xs:element name="Carro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Automovil"/>
+                <xs:element ref="TipoCarro"/>
+            </xs:sequence>
+            <xs:attribute name="carroID" type="xs:string" use="required"/>
+            <xs:attribute name="mejoraCarroID" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TipoCarro">
+        <xs:complexType>
+            <xs:attribute name="Diseno" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Camionetas que es uno hijo del de Lista Vehiculos
+     Tiene como elemento Hijo la Camioneta-->
+    <xs:element name="Camionetas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Camioneta" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- elemento camioneta que tiene como atributo camionetaID
+    y como elementos Automovil y tipoCamioneta -->
+    <xs:element name="Camioneta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Automovil"/>
+                <xs:element ref="TipoCamioneta"/>
+            </xs:sequence>
+            <xs:attribute name="camionetaID" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- elemento tipo camioneta que es un hijo de camioneta y por atritubo el diseño -->
+    <xs:element name="TipoCamioneta">
+        <xs:complexType>
+            <xs:attribute name="Diseno" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+	<!-- elemento automovil que es uno hijo de Moto, Carro, Camioneta
+	 tiene como atributos, condicion, transmision, imagen, y el tipo imagen
+	 tiene como elementos hijos marca, modelo, color, precio, kilometraje, description -->
+    <xs:element name="Automovil">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Marca"/>
+                <xs:element ref="Modelo"/>
+                <xs:element ref="Color"/>
+                <xs:element ref="Precio"/>
+                <xs:element ref="Kilometraje"/>
+                <xs:element ref="Descripcion"/>
+            </xs:sequence>
+            <xs:attribute name="Condicion" type="xs:string" use="required"/>
+            <xs:attribute name="Transmision" type="xs:string" use="required"/>
+            <xs:attribute name="Imagen" type="xs:string" use="required"/>
+            <xs:attribute name="TipoImagen" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+	<!-- los elementos hijos de automovil -->
+	<xs:element name="Marca" type="xs:string"/>
+	<xs:element name="Modelo">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="Anio"/>
+				<xs:element ref="Version" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Anio" type="xs:string"/>
+	<xs:element name="Version" type="xs:string"/>
+    <xs:element name="Color" type="xs:string"/>
+	<xs:element name="Precio" type="xs:string"/>
+    <xs:element name="Kilometraje" type="xs:string"/>
+	<xs:element name="Descripcion" type="xs:string"/>
+    <!-- el elemento Pie de pagia que es uno hijo del elemento Concesionaria -->
+    <xs:element name="PiePagina" type="xs:string"/>
+</xs:schema>
