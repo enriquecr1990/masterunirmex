@@ -1,0 +1,18 @@
+#loader{
+    text-align: center;
+}
+
+nav{
+    border-radius: 5px;
+}
+
+#contenedor_mensajes, #contenedor_mensajes_modal{
+    position: fixed;
+    float: right;
+    top: 20px;
+    right: 30px;
+    width: 350px;
+    z-index:1000;
+    opacity: 0.95;
+    text-shadow: 5px 10px 7px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,6 @@
+.git
+.idea
+*.lock
+.vscode
+/vendor
+/node_modules

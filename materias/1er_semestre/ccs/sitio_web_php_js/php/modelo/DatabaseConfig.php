@@ -19,7 +19,7 @@ class DatabaseConfig {
                 break;
             default:
                 $db_config['host'] = 'localhost';
-                $db_config['port'] = '3308';
+                $db_config['port'] = '3306';
                 $db_config['user'] = 'root';
                 $db_config['password'] = '';
                 $db_config['data_base'] = 'sitio_php';
