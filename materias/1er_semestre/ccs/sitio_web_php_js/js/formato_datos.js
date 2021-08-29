@@ -36,7 +36,7 @@ var FormatoDatos = {
         //se dividen en array los elementos de la fecha que se recibe en formato yyyy-mm-dd por el separador - (guion medio)
         fecha = fecha.split('-');
         //se crea la fecha restando un numero al mes dado que el date de JS los meses son del 0 al 11
-        var date = new Date(fecha[0],fecha[1] - 1, fecha[2]);
+        var date = new Date(fecha[0],fecha[1] - 1, fecha[2] + 1);
         return date.getDate() + ' de ' + this.getMes(date.getMonth());
     },
 

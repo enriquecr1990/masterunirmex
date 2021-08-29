@@ -16,13 +16,13 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Configurar cabeceras y cors para que pueda procesar las peticiones que no sean del host de la app en node js
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
-});
+});*/
 
 //ruta del index para el servidor de node js
 app.get('/',function(req,res){
@@ -139,6 +139,6 @@ app.get('/contacto/eliminar/:id',function(req,res){
 });
 
 //se agrega el listen para arrancar el servidor en el puerto 8080
-app.listen(8080,'192.168.1.110',function(){
+app.listen(8080,function(){
     console.log('***** Se inicio el servidor correctamente'); 
 });
